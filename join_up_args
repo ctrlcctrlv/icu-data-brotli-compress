@@ -1,0 +1,10 @@
+#!/bin/bash
+printf 'tar -cvf combined10/'
+for f in $@; do
+	printf "${f/.ucm/}"
+done
+printf '.ucm.tar '
+for f in $@; do
+	printf "$f "
+done
+echo

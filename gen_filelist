@@ -1,0 +1,10 @@
+#!/bin/bash
+printf 'brotli/'
+for f in $@; do
+	printf "${f/.ucm/}"
+done
+printf ".ucm.tar.b\t"
+for f in $@; do
+        printf "$f "
+done
+echo
